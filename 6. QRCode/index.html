@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>QR Code | Le Nguyen</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#">
+            <input type="file" hidden>
+            <img src="#" alt="">
+            <div class="content">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <p>Upload QR Code To Read</p>
+            </div>
+        </form>
+        <div class="details">
+            <textarea spellcheck="false" disabled></textarea>
+            <div class="buttons">
+                <button class="close">Close</button>
+                <button class="copy">Copy Text</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <input type="color" class="light" value="#ffffff">
+            <input type="color" class="dark">
+            <select class="sizes">
+                <option value="100">100×100</option>
+                <option value="200">200×200</option>
+                <option selected value="300">300×300</option>
+            </select>
+        </div>
+        <input type="text" class="qr-text" placeholder="Enter QR Text">
+        <div id="qr-code"></div>
+        <div class="action-container">
+            <a href="#" class="download btn" download="QRCode">
+                <span>Download</span>
+                <img src="./images/download.svg" alt="">
+            </a>
+            <button class="btn share-btn">
+                <span>Share</span>
+                <img src="./images/share.svg" alt="">
+            </button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="./js/generatorqr.js"></script>
+    <script src="./js/readerqr.js"></script>
+</body>
+</html>
